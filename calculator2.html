@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calculator2</title>
+  <link rel="stylesheet" href="calculator2.css">
+</head>
+<body>
+  <div class="container" id="body">
+    <input type="text" id="display" readonly>
+    <div class="buttons">
+      <button onclick="calvalue= '';document.querySelector('#display').value = calvalue;">AC</button>
+      <button onclick="calvalue= calvalue.slice(0,-1);document.querySelector('#display').value = calvalue;">C</button>
+      <button onclick= "calvalue += 1;document.querySelector('#display').value = calvalue;">1</button>
+      <button onclick="calvalue= calvalue + 2;document.querySelector('#display').value = calvalue;">2</button>
+      <button onclick="calvalue= calvalue + 3;document.querySelector('#display').value = calvalue;">3</button>
+      <button onclick="calvalue= calvalue + 4;document.querySelector('#display').value = calvalue;">4</button>
+      <button onclick="calvalue= calvalue + 5;document.querySelector('#display').value = calvalue;">5</button>
+      <button onclick="calvalue= calvalue + 6;document.querySelector('#display').value = calvalue;">6</button>
+      <button onclick="calvalue= calvalue + 7;document.querySelector('#display').value = calvalue;">7</button>
+      <button onclick="calvalue= calvalue + 8;document.querySelector('#display').value = calvalue;">8</button>
+      <button onclick="calvalue= calvalue + 9;document.querySelector('#display').value = calvalue;">9</button>
+      <button onclick="calvalue= calvalue + 0;document.querySelector('#display').value = calvalue;">0</button>
+
+
+          <button class="operator" onclick="calvalue= calvalue + '.';document.querySelector('#display').value = calvalue;">.</button>
+          <button  class="operator" onclick="calvalue= calvalue + '-';document.querySelector('#display').value = calvalue;">-</button>
+          <button  class="operator" onclick="calvalue= calvalue + '/';document.querySelector('#display').value = calvalue;">/</button>
+          <button  class="operator" onclick="calvalue= calvalue + '*';document.querySelector('#display').value = calvalue;">*</button>
+          <button  class="operator" onclick="calvalue= calvalue + '+';document.querySelector('#display').value = calvalue;">+</button>
+          <button   class="operator" onclick="
+          let result = eval(calvalue); 
+          calvalue = result;
+          document.querySelector('#display').value = calvalue ;">=</button>
+          <button  class="operator" onclick="
+          calvalue = calvalue + π;
+          document.querySelector('#display').value = calvalue;
+          " id="he">π</button>
+          <button  class="operator" id="hello" onclick="calvalue=calvalue*calvalue;document.querySelector('#display').value = calvalue;">x2</button>
+
+
+
+          
+        </div>
+      </div>
+
+
+  <SCRIPT>
+  
+    const π = 3.14;
+    let calvalue = '';
+
+    document.querySelector('#display').value = calvalue;
+    
+  </SCRIPT>
+</body>
+</html>
